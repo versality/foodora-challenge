@@ -1,4 +1,6 @@
 class Gif < ActiveRecord::Base
+  include Giphyable
+
   validates :uid, uniqueness: true
 
   def tags=(tags)
