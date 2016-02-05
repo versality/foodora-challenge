@@ -1,5 +1,8 @@
 class InvalidSearchArgs < StandardError; end
 
+# Validation mechanism for Giphy various endpoints
+#
+
 module Giphy
   module Validation
     def validate_by_title_args(title)

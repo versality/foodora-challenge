@@ -1,5 +1,9 @@
 require_relative 'core'
 
+# Abstract auth class for Giphy API.
+# Provides essential mechanism for authenticating with endpoints
+#
+
 module Giphy
   class Auth < Giphy::Core
     def initialize
@@ -8,6 +12,7 @@ module Giphy
       authenticate
     end
 
+    # Main method responsible for merging auth credentials into @params further usage
     def authenticate
       @params.merge!(credentials)
     end

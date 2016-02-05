@@ -3,6 +3,9 @@ require_relative 'validation'
 require 'json'
 require 'net/http'
 
+# Search end-chain class providing search mechanism
+#
+
 module Giphy
   class Search < Giphy::Auth
     include Giphy::Validation
@@ -15,6 +18,10 @@ module Giphy
       construct_endpoint
     end
 
+    # Allows searching gifs by title
+    #
+    # @param [String] title query string for fetching gifs
+    # @return [Hash] with gifs as per https://github.com/Giphy/GiphyAPI#sample-response-search
     def by_title(title)
       validate_by_title_args(title)
 
