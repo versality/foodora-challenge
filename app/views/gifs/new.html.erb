@@ -1,0 +1,6 @@
+<%= form_tag(:gifs_search, method: 'get', class: 'gifs-search', remote: true) do %>
+    <%= text_field(:gifs, :q, placeholder: 'Search gifs', class: 'search-input') %>
+    <%= submit_tag(:search, class: 'submit-button') %>
+<% end %>
+
+<div class="gifs-list"></div>

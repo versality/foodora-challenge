@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <div class="container">
+    <ul>
+      <li class="root">Foodora Code Challenge</li>
+      <% if user_signed_in? %>
+          <li class="nav-button">
+            <%= link_to('Stored Gifs', gifs_path) %>
+          </li>
+          <li class="nav-button">
+            <%= link_to('Search Gifs', new_gif_path) %>
+          </li>
+      <% end %>
+    </ul>
+
+    <span class="u-pull-right">
+      <% if user_signed_in? %>
+        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+      <% end %>
+    </span>
+  </div>
+</nav>

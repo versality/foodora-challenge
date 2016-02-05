@@ -1,0 +1,19 @@
+<% if @gifs.empty? %>
+    <h3>Nothing found! :(</h3>
+<% end %>
+
+<ul>
+  <% @gifs.each do |gif| %>
+    <li>
+      <%= giphy_fixed_height_image(gif) %>
+
+      <div class="save-menu">
+        <%= form_tag(:gifs, class: 'gifs-save', remote: true) do %>
+            <%= text_field_tag('gifs[tags]', nil, placeholder: 'Tags by comma', class: 'tag-input') %>
+            <%= hidden_field_tag('gifs[uid]', gif['id']) %>
+            <%= submit_tag(:save, class: 'submit-button') %>
+        <% end %>
+      </div>
+    </li>
+  <% end %>
+</ul>

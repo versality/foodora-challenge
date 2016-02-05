@@ -1,0 +1,28 @@
+<% if @gifs.empty? %>
+    <h3>Nothing here yet. Please save some gifs first.</h3>
+<% end %>
+
+<table class="u-full-width gifs-table">
+  <thead>
+  <tr>
+    <th>Image</th>
+    <th>Tags</th>
+    <th>ID</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @gifs.each do |gif| %>
+      <tr>
+        <td>
+          <%= image_tag(gif.giphy_image_url) %>
+        </td>
+        <td>
+          <%= gif.tags.join(', ') %>
+        </td>
+        <td>
+          <%= gif.uid %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
