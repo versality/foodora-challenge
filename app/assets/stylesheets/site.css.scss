@@ -1,0 +1,91 @@
+.navbar {
+  width: 100%;
+  height: 50px;
+  line-height: 3em;
+  border-bottom: 1px #c3c3c3 solid;
+  margin-bottom: 75px;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+
+    li {
+      float: left;
+
+      &.nav-button {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.search-input {
+  display: block;
+  margin: 0 auto;
+}
+
+.submit-button {
+  margin-top: 10px;
+}
+
+form {
+  text-align: center;
+}
+
+.gifs-list {
+  h3 {
+    text-align: center;
+  }
+
+  margin-top: 30px;
+
+  ul {
+    list-style-type: none;
+    text-align: center;
+  }
+
+  li {
+    margin-left: 10px;
+    display: inline-block;
+    position: relative;
+
+    .save-menu {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: none;
+
+      .tag-input {
+        width: 130px;
+        margin: 65px auto 0 auto;
+        display: block;
+      }
+
+      .submit-button {
+        background-color: white;
+      }
+
+      h1 {
+        color: white;
+        text-shadow: 2px 2px #030000;
+      }
+    }
+
+    &:hover {
+      .save-menu {
+        display: block;
+      }
+    }
+  }
+}
+
+.devise-auth {
+  h2 {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  input {
+    margin-top: 10px;
+  }
+}
