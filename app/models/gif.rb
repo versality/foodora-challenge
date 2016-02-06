@@ -9,7 +9,7 @@ class Gif < ActiveRecord::Base
     else
       tags                = tags
       tags_without_spaces = tags.gsub(/\s+/, '')
-      tags_array          = tags_without_spaces.split(',')
+      tags_array          = tags_without_spaces.scan(/[\w'-]+/)
       super(tags_array)
     end
   end
