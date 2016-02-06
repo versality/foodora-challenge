@@ -13,8 +13,8 @@ describe Giphy::Search do
     end
 
     context 'given incorrect arguments type' do
-      it 'should raise InvalidSearchArgs exception' do
-        expect { giphy_search.by_title([1, 2, 3]) }.to raise_error(InvalidSearchArgs)
+      it 'should raise Giphy::InvalidSearchArgs exception' do
+        expect { giphy_search.by_title([1, 2, 3]) }.to raise_error(Giphy::InvalidSearchArgs)
       end
     end
   end
